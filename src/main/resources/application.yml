@@ -1,0 +1,12 @@
+# https://github.com/ali-bouali/book-social-network/blob/main/book-network/src/main/resources/application.yml
+spring:
+  profiles:
+    active: dev
+  servlet:        # because we want ot add file we add servlet
+    multipart:
+      max-file-size: 50MB  # you can reduce it pr increasing this
+springdoc:
+  default-produces-media-type: application/json  # the default is */* not this type so have this in  your code
+server:
+  servlet:
+    context-path: /api/v1/    # I think you can change this but the teacher use this
